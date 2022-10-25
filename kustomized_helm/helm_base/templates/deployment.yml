@@ -17,6 +17,8 @@ spec:
       - name: 2048-app
         # Replace with your docker registry info
         image: ghcr.io/jtmack6/docker-2048 
+        imagePullSecrets:
+        - name: basic-docker-user-pass
         imagePullPolicy: Always
         ports:
         - containerPort: 80
